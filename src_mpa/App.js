@@ -25,11 +25,11 @@ function App() {
 	return (
 		<div className="App">
 			<Router>
-				{navMain.map(item => <Header url={item.url} text={item.text} />)}
+				{navMain.map(item => <Header url={item.url} text={item.text}/>)}
 				<Routes>
 					<Route exact path='/' element={<Home />} />
 					<Route path='/about' element={<About />} />
-					<Route path='/cat' element={<Category data={navCat} />} />
+					<Route exact path='/cat' element={<Category data={navCat}/>} />
 					<Route path='/cat/:elem' element={<CategoryDescription />} />
 					<Route path='*' element={<Error />} />
 				</Routes>
